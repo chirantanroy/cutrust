@@ -526,14 +526,11 @@ nav.scrolled .nav-hamburger span {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  cursor: pointer;
+  /*cursor: pointer;*/
   transition: transform 0.5s cubic-bezier(.22,1,.36,1);
 }
 
-  a.plan-card {
-  text-decoration: none;
-  display: flex;
-}
+
 .plan-card:hover {
   transform: scale(1.02);
 }
@@ -1207,7 +1204,7 @@ nav.scrolled .nav-dropdown-menu a:hover{background:rgba(255,255,255,.08);color:v
     <h2 class="reveal delay-1">Our Plans</h2>
     <p class="section-subtitle reveal delay-2">We administer two core programs serving credit union employees across British Columbia.</p>
     <div class="plans-grid">
-      <a href="our-plans.html" class="plan-card pension reveal-left delay-2">
+      <div class="plan-card pension reveal-left delay-2">
         <div class="plan-card-bg"></div>
         <div class="plan-card-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
@@ -1216,10 +1213,10 @@ nav.scrolled .nav-dropdown-menu a:hover{background:rgba(255,255,255,.08);color:v
         <h3>BC Credit Union Employees' Pension Plan</h3>
         <p>A multi-employer pension plan helping credit union employees build long-term financial security for retirement.</p>
         <a href="our-plans.html" class="plan-link">Learn more about pension <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-       </a>
+      
     </div>
     
-      <a href="our-benefits-plan.html" class="plan-card benefits reveal-right delay-3">
+      <div class="plan-card benefits reveal-right delay-3">
         <div class="plan-card-bg"></div>
         <div class="plan-card-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
@@ -1228,7 +1225,7 @@ nav.scrolled .nav-dropdown-menu a:hover{background:rgba(255,255,255,.08);color:v
         <h3>BC Credit Union Employee Benefits Trust</h3>
         <p>Comprehensive health and wellness benefits coverage designed to support the overall well-being of credit union employees and their families.</p>
         <a href="our-benefits-plan.html" class="plan-link">Learn more about benefits <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-  </a>    
+    
   </div>
     </div>
   </div>

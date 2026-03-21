@@ -6,22 +6,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<!-- ══════════════════════════════════════════════════════════════
-     BLOG POST TEMPLATE — CUtrust
-     ══════════════════════════════════════════════════════════════
-     HOW TO USE:
-     1. Copy this file and rename it (e.g., "2026-03-plan-early.html")
-     2. Replace the placeholder content below with your actual post content
-     3. Update the <title> tag
-     4. Update the post-hero section (title, date, category, excerpt)
-     5. Replace the featured image src
-     6. Write your article content in the post-body section
-     7. Update the post tags
-     8. Update the related posts section
-     9. Add the post entry to resources.html (see instructions there)
-     10. Update the What's New slider in index.html (see instructions)
-     ══════════════════════════════════════════════════════════════ -->
-<title>POST_TITLE — CUtrust</title>
+<title>Resources — CUtrust</title>
 <style>
 
 :root {
@@ -1233,64 +1218,44 @@ nav.scrolled .nav-dropdown-menu a:hover{background:rgba(255,255,255,.08);color:v
 }
 
 
-/* ─── BLOG POST STYLES ─── */
-.post-hero{padding:160px 48px 60px;background:linear-gradient(165deg,var(--frost) 0%,var(--ice) 40%,#D5E3EC 100%);position:relative;overflow:hidden}
-.post-hero::before{content:'';position:absolute;top:-20%;right:-15%;width:500px;height:500px;background:radial-gradient(circle,rgba(61,107,126,.08) 0%,transparent 70%);border-radius:50%}
-.post-hero-inner{max-width:800px;margin:0 auto}
-.post-meta{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:20px}
-.post-date{font-size:.85rem;color:var(--text-muted);font-weight:400}
-.post-category{display:inline-block;padding:5px 14px;background:rgba(91,127,149,.1);color:var(--steel);border-radius:50px;font-size:.75rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:all .3s}
-.post-category:hover{background:rgba(91,127,149,.2)}
-.post-hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2rem,4.5vw,3.2rem);color:var(--deep);letter-spacing:-1px;margin-bottom:20px;line-height:1.2}
-.post-hero .post-excerpt{font-size:1.15rem;color:var(--text-muted);line-height:1.75;font-weight:300;max-width:720px}
-.post-featured-image{max-width:900px;margin:-30px auto 0;padding:0 48px;position:relative;z-index:2}
-.post-featured-image img{width:100%;height:auto;border-radius:20px;box-shadow:0 20px 60px rgba(27,58,75,.12);display:block}
-.post-body{max-width:760px;margin:0 auto;padding:60px 48px 80px}
-.post-body h2{font-family:'DM Serif Display',serif;font-size:1.6rem;color:var(--deep);margin:48px 0 16px;letter-spacing:-.3px}
-.post-body h3{font-family:'DM Serif Display',serif;font-size:1.3rem;color:var(--deep);margin:36px 0 12px}
-.post-body p{font-size:1.05rem;color:var(--text-muted);line-height:1.85;font-weight:300;margin-bottom:20px}
-.post-body p strong{color:var(--text-dark);font-weight:600}
-.post-body a{color:var(--accent);text-decoration:underline;text-underline-offset:3px;transition:color .3s}
-.post-body a:hover{color:var(--steel)}
-.post-body ul,.post-body ol{margin:16px 0 24px 24px;color:var(--text-muted);font-size:1.05rem;line-height:1.85;font-weight:300}
-.post-body li{margin-bottom:8px}
-.post-body blockquote{margin:32px 0;padding:24px 32px;background:rgba(91,127,149,.04);border-left:4px solid var(--steel);border-radius:0 16px 16px 0}
-.post-body blockquote p{color:var(--text-dark);font-size:1.1rem;font-weight:400;font-style:italic;margin-bottom:0}
-.post-body img{width:100%;border-radius:16px;margin:32px 0;box-shadow:0 8px 30px rgba(27,58,75,.08)}
-.post-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:48px;padding-top:32px;border-top:1px solid rgba(91,127,149,.1)}
-.post-tags span{font-size:.85rem;color:var(--text-muted);font-weight:500;line-height:32px}
-.post-tag-link{display:inline-block;padding:4px 14px;background:var(--frost);color:var(--steel);border-radius:50px;font-size:.8rem;font-weight:500;text-decoration:none;transition:all .3s;border:1px solid rgba(91,127,149,.1)}
-.post-tag-link:hover{background:rgba(91,127,149,.1);border-color:var(--steel)}
-.post-author-box{max-width:760px;margin:0 auto;padding:0 48px 60px}
-.post-author-inner{display:flex;align-items:center;gap:20px;padding:28px 32px;background:var(--frost);border-radius:16px;border:1px solid rgba(91,127,149,.08)}
-.post-author-avatar{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--steel),var(--teal));display:flex;align-items:center;justify-content:center;color:var(--white);font-family:'DM Serif Display',serif;font-size:1.2rem;flex-shrink:0}
-.post-author-info h4{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--deep);margin-bottom:4px}
-.post-author-info p{font-size:.88rem;color:var(--text-muted);font-weight:300;margin:0}
-.related-posts{padding:80px 48px;background:var(--deep);position:relative;overflow:hidden}
-.related-posts::before{content:'';position:absolute;top:0;right:0;width:40%;height:100%;background:linear-gradient(135deg,rgba(61,107,126,.15),transparent);pointer-events:none}
-.related-posts h2{font-family:'DM Serif Display',serif;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--white);margin-bottom:40px;letter-spacing:-.5px;text-align:center}
-.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;max-width:1000px;margin:0 auto}
-.related-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;transition:all .5s cubic-bezier(.22,1,.36,1);text-decoration:none;display:block}
-.related-card:hover{transform:translateY(-6px);border-color:rgba(212,165,116,.3);box-shadow:0 20px 50px rgba(0,0,0,.2)}
-.related-card-img{height:180px;background:linear-gradient(135deg,var(--teal),var(--steel));overflow:hidden}
-.related-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.related-card:hover .related-card-img img{transform:scale(1.05)}
-.related-card-body{padding:24px}
-.related-card .news-tag{margin-bottom:12px}
-.related-card h3{font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--white);line-height:1.4;margin-bottom:8px}
-.related-card p{font-size:.88rem;color:var(--mist);line-height:1.6;font-weight:300}
-.breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:20px;font-size:.85rem}
-.breadcrumb a{color:var(--steel);text-decoration:none;transition:color .3s}
-.breadcrumb a:hover{color:var(--deep)}
-.breadcrumb span{color:var(--text-muted)}
+/* ─── RESOURCES PAGE ─── */
+.resources-filters{max-width:1200px;margin:0 auto;padding:0 48px 60px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.filter-group{display:flex;align-items:center;gap:10px}
+.filter-label{font-size:.82rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--steel)}
+.filter-btn{padding:8px 20px;border-radius:50px;border:1.5px solid rgba(91,127,149,.15);background:transparent;color:var(--text-muted);font-size:.85rem;font-weight:500;cursor:pointer;transition:all .3s;font-family:'Outfit',sans-serif}
+.filter-btn:hover{border-color:var(--steel);color:var(--steel)}
+.filter-btn.active{background:var(--deep);border-color:var(--deep);color:var(--white)}
+.filter-select{padding:8px 36px 8px 16px;border-radius:50px;border:1.5px solid rgba(91,127,149,.15);background:var(--white);color:var(--text-muted);font-size:.85rem;font-weight:500;cursor:pointer;font-family:'Outfit',sans-serif;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%235B7F95' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;transition:all .3s}
+.filter-select:focus{outline:none;border-color:var(--steel)}
+.filter-divider{width:1px;height:24px;background:rgba(91,127,149,.15);margin:0 8px}
+.clear-filters{font-size:.82rem;color:var(--steel);text-decoration:underline;text-underline-offset:3px;cursor:pointer;transition:color .3s;background:none;border:none;font-family:'Outfit',sans-serif}
+.clear-filters:hover{color:var(--deep)}
+.hidden{display:none}
+.resources-grid{max-width:1200px;margin:0 auto;padding:0 48px 80px;display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:28px}
+.resource-card{background:var(--white);border:1px solid rgba(91,127,149,.08);border-radius:20px;overflow:hidden;transition:all .5s cubic-bezier(.22,1,.36,1);text-decoration:none;display:flex;flex-direction:column}
+.resource-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(27,58,75,.08);border-color:rgba(91,127,149,.15)}
+.resource-card-img{height:200px;background:linear-gradient(135deg,var(--teal),var(--steel));overflow:hidden;position:relative}
+.resource-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.resource-card:hover .resource-card-img img{transform:scale(1.05)}
+.resource-card-body{padding:28px;flex:1;display:flex;flex-direction:column}
+.resource-card-meta{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.resource-card .post-category{display:inline-block;padding:4px 12px;background:rgba(91,127,149,.1);color:var(--steel);border-radius:50px;font-size:.7rem;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.resource-card .post-date{font-size:.8rem;color:var(--text-muted)}
+.resource-card h3{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--deep);line-height:1.4;margin-bottom:10px;transition:color .3s}
+.resource-card:hover h3{color:var(--steel)}
+.resource-card p{font-size:.92rem;color:var(--text-muted);line-height:1.65;font-weight:300;flex:1}
+.resource-card .read-more{display:inline-flex;align-items:center;gap:6px;margin-top:16px;color:var(--steel);font-weight:500;font-size:.88rem;text-decoration:none;transition:gap .3s,color .3s}
+.resource-card:hover .read-more{gap:12px;color:var(--warm)}
+.no-results{text-align:center;padding:80px 48px;max-width:1200px;margin:0 auto}
+.no-results h3{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--deep);margin-bottom:12px}
+.no-results p{color:var(--text-muted);font-weight:300}
+.results-info{max-width:1200px;margin:0 auto;padding:0 48px 24px;font-size:.88rem;color:var(--text-muted);font-weight:400}
 @media(max-width:640px){
-  .post-hero{padding:120px 24px 40px}
-  .post-featured-image{padding:0 24px}
-  .post-body{padding:40px 24px 60px}
-  .post-author-box{padding:0 24px 40px}
-  .related-posts{padding:60px 24px}
-  .related-grid{grid-template-columns:1fr}
-  .post-author-inner{flex-direction:column;text-align:center}
+  .resources-filters{padding:0 24px 40px;flex-direction:column;align-items:stretch}
+  .filter-group{flex-wrap:wrap}
+  .filter-divider{display:none}
+  .resources-grid{padding:0 24px 60px;grid-template-columns:1fr}
+  .results-info{padding:0 24px 16px}
 }
 
 </style>
@@ -1316,107 +1281,129 @@ nav.scrolled .nav-dropdown-menu a:hover{background:rgba(255,255,255,.08);color:v
   </div>
 </nav>
 
-<!-- ═══ POST HERO ═══ -->
-<div class="post-hero">
-  <div class="post-hero-inner">
-    <div class="breadcrumb">
-      <a href="index.html">Home</a>
-      <span>/</span>
-      <a href="resources.html">Resources</a>
-      <span>/</span>
-      <span>POST_TITLE</span>
-    </div>
-    <div class="post-meta">
-      <span class="post-date" data-date="2026-03-15">March 15, 2026</span>
-      <a href="resources.html?category=CATEGORY_SLUG" class="post-category">POST_CATEGORY</a>
-    </div>
-    <h1>POST_TITLE</h1>
-    <p class="post-excerpt">POST_EXCERPT — A brief 1–2 sentence summary of the blog post that appears in the hero area and in card previews on the home page and resources page.</p>
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="section-label" style="color:var(--steel)">Knowledge Hub</div>
+    <h1>Resources &amp; <em>Insights</em></h1>
+    <p>Stay informed with the latest news, updates, and educational content from CUtrust. Filter by category or year to find what matters to you.</p>
   </div>
 </div>
 
-<!-- ═══ FEATURED IMAGE ═══ -->
-<div class="post-featured-image reveal">
-  <img src="https://placehold.co/900x480/3D6B7E/FFFFFF?text=Featured+Image" alt="POST_TITLE">
+<!-- ═══ FILTERS ═══ -->
+<div class="resources-filters" id="filters">
+  <div class="filter-group">
+    <span class="filter-label">Category:</span>
+    <button class="filter-btn active" data-category="all">All</button>
+    <!-- ADD NEW CATEGORIES: <button class="filter-btn" data-category="your-slug">Label</button> -->
+    <button class="filter-btn" data-category="pension">Pension</button>
+    <button class="filter-btn" data-category="benefits">Benefits</button>
+    <button class="filter-btn" data-category="wellness">Wellness</button>
+    <button class="filter-btn" data-category="employer">Employer</button>
+  </div>
+  <div class="filter-divider"></div>
+  <div class="filter-group">
+    <span class="filter-label">Year:</span>
+    <select class="filter-select" id="yearFilter">
+      <option value="all">All Years</option>
+      <option value="2026">2026</option>
+      <option value="2025">2025</option>
+    </select>
+  </div>
+  <button class="clear-filters hidden" id="clearFilters">Clear all filters</button>
 </div>
 
-<!-- ═══ ARTICLE BODY ═══ -->
-<article class="post-body">
-  <p>This is the opening paragraph of your blog post. It should hook the reader and provide context for the topic at hand.</p>
-  <h2>Section Heading</h2>
-  <p>Break your content into clear sections using <code>&lt;h2&gt;</code> tags. You can use <strong>bold text</strong> for emphasis and <a href="#">links</a> to reference external resources.</p>
-  <blockquote>
-    <p>Use blockquotes to highlight important takeaways, quotes from experts, or key statistics.</p>
-  </blockquote>
-  <h3>Sub-Section Heading</h3>
-  <p>Use <code>&lt;h3&gt;</code> for sub-sections within a larger section.</p>
-  <ul>
-    <li>Use bullet lists for unordered items</li>
-    <li>Keep each bullet concise and scannable</li>
-    <li>Three to five items per list works well</li>
-  </ul>
-  <h2>Another Section</h2>
-  <p>Continue with additional sections as needed. A typical blog post should be 500–1,500 words.</p>
-  <p>Wrap up each post with a clear conclusion or call to action.</p>
-  <div class="post-tags">
-    <span>Tags:</span>
-    <a href="resources.html?category=pension" class="post-tag-link">Pension</a>
-    <a href="resources.html?category=wellness" class="post-tag-link">Wellness</a>
-  </div>
-</article>
+<div class="results-info" id="resultsInfo"></div>
 
-<!-- ═══ AUTHOR BOX ═══ -->
-<div class="post-author-box reveal">
-  <div class="post-author-inner">
-    <div class="post-author-avatar">C</div>
-    <div class="post-author-info">
-      <h4>CUtrust</h4>
-      <p>Credit Union Pension &amp; Benefits Trust — Supporting your health and financial wellness.</p>
+<!-- ═══ POST CARDS GRID ═══ -->
+<!-- TO ADD A NEW POST: Copy a resource-card block, place at TOP, update data-date, data-categories, and content -->
+<div class="resources-grid" id="postsGrid">
+
+  <a href="posts/2026-03-plan-early.html" class="resource-card reveal" data-date="2026-03-15" data-categories="pension">
+    <div class="resource-card-img">
+      <img src="https://placehold.co/400x220/3D6B7E/FFFFFF?text=Plan+Early" alt="Plan Early, Retire Confidently">
     </div>
-  </div>
+    <div class="resource-card-body">
+      <div class="resource-card-meta">
+        <span class="post-category">Pension</span>
+        <span class="post-date">March 15, 2026</span>
+      </div>
+      <h3>Plan Early, Retire Confidently</h3>
+      <p>Just 1 in 10 Canadians say they know how much income they'll need in retirement. Learn how your workplace pension can help you retire with peace of mind.</p>
+      <span class="read-more">Read more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+    </div>
+  </a>
+
+  <a href="posts/2026-02-nourish-flourish.html" class="resource-card reveal delay-1" data-date="2026-02-20" data-categories="wellness">
+    <div class="resource-card-img">
+      <img src="https://placehold.co/400x220/5B7F95/FFFFFF?text=Nourish" alt="Nourish to Flourish">
+    </div>
+    <div class="resource-card-body">
+      <div class="resource-card-meta">
+        <span class="post-category">Wellness</span>
+        <span class="post-date">February 20, 2026</span>
+      </div>
+      <h3>Nourish to Flourish</h3>
+      <p>The Nourish to Flourish message emphasizes that food is more than fuel — it's a cornerstone of overall well-being.</p>
+      <span class="read-more">Read more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+    </div>
+  </a>
+
+  <a href="posts/2026-01-understanding-coverage.html" class="resource-card reveal delay-2" data-date="2026-01-10" data-categories="benefits">
+    <div class="resource-card-img">
+      <img src="https://placehold.co/400x220/1B3A4B/FFFFFF?text=Coverage" alt="Understanding Your Coverage">
+    </div>
+    <div class="resource-card-body">
+      <div class="resource-card-meta">
+        <span class="post-category">Benefits</span>
+        <span class="post-date">January 10, 2026</span>
+      </div>
+      <h3>Understanding Your Coverage</h3>
+      <p>Your benefits plan provides comprehensive health and dental coverage. Review your plan details and learn how to make the most of the support available to you.</p>
+      <span class="read-more">Read more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+    </div>
+  </a>
+
+  <a href="posts/2025-11-open-enrollment.html" class="resource-card reveal delay-3" data-date="2025-11-01" data-categories="benefits employer">
+    <div class="resource-card-img">
+      <img src="https://placehold.co/400x220/4A9EAF/FFFFFF?text=Enrollment" alt="Open Enrollment Guide">
+    </div>
+    <div class="resource-card-body">
+      <div class="resource-card-meta">
+        <span class="post-category">Benefits</span>
+        <span class="post-date">November 1, 2025</span>
+      </div>
+      <h3>Open Enrollment Guide 2025</h3>
+      <p>Everything employers and employees need to know about the annual open enrollment period, including key dates, plan options, and how to make changes.</p>
+      <span class="read-more">Read more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+    </div>
+  </a>
+
+  <a href="posts/2025-09-retirement-readiness.html" class="resource-card reveal" data-date="2025-09-15" data-categories="pension wellness">
+    <div class="resource-card-img">
+      <img src="https://placehold.co/400x220/8BAABB/1B3A4B?text=Retirement" alt="Retirement Readiness Checklist">
+    </div>
+    <div class="resource-card-body">
+      <div class="resource-card-meta">
+        <span class="post-category">Pension</span>
+        <span class="post-date">September 15, 2025</span>
+      </div>
+      <h3>Your Retirement Readiness Checklist</h3>
+      <p>Whether retirement is decades away or just around the corner, this checklist helps you assess your preparedness and identify areas to focus on.</p>
+      <span class="read-more">Read more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+    </div>
+  </a>
+
 </div>
 
-<!-- ═══ RELATED POSTS ═══ -->
-<section class="related-posts">
-  <h2 class="reveal">Related Articles</h2>
-  <div class="related-grid">
-    <a href="#" class="related-card reveal delay-1">
-      <div class="related-card-img">
-        <img src="https://placehold.co/400x200/3D6B7E/FFFFFF?text=Related+1" alt="Related post">
-      </div>
-      <div class="related-card-body">
-        <div class="news-tag">Category</div>
-        <h3>Related Post Title One</h3>
-        <p>Brief excerpt of the related post goes here.</p>
-      </div>
-    </a>
-    <a href="#" class="related-card reveal delay-2">
-      <div class="related-card-img">
-        <img src="https://placehold.co/400x200/5B7F95/FFFFFF?text=Related+2" alt="Related post">
-      </div>
-      <div class="related-card-body">
-        <div class="news-tag">Category</div>
-        <h3>Related Post Title Two</h3>
-        <p>Brief excerpt of the related post goes here.</p>
-      </div>
-    </a>
-    <a href="#" class="related-card reveal delay-3">
-      <div class="related-card-img">
-        <img src="https://placehold.co/400x200/1B3A4B/FFFFFF?text=Related+3" alt="Related post">
-      </div>
-      <div class="related-card-body">
-        <div class="news-tag">Category</div>
-        <h3>Related Post Title Three</h3>
-        <p>Brief excerpt of the related post goes here.</p>
-      </div>
-    </a>
-  </div>
-</section>
+<div class="no-results hidden" id="noResults">
+  <h3>No posts found</h3>
+  <p>Try adjusting your filters to see more results.</p>
+</div>
 
 <div class="cta-banner">
-  <h2 class="reveal">Need More Information?</h2>
-  <p class="reveal delay-1">Contact CUtrust for questions about your pension or benefits plan.</p>
-  <a href="#" class="btn-primary reveal delay-2">Get in Touch <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+  <h2 class="reveal">Have a Question?</h2>
+  <p class="reveal delay-1">Reach out to CUtrust for information about your pension or benefits plan.</p>
+  <a href="#" class="btn-primary reveal delay-2">Contact Us <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
 </div>
 
 <footer>
@@ -1480,6 +1467,64 @@ if (hamburger && navLinks) {
     }
   });
 }
+
+// ═══ RESOURCES FILTERING ═══
+(function() {
+  const categoryBtns = document.querySelectorAll('.filter-btn[data-category]');
+  const yearSelect = document.getElementById('yearFilter');
+  const grid = document.getElementById('postsGrid');
+  const cards = Array.from(grid.querySelectorAll('.resource-card'));
+  const noResults = document.getElementById('noResults');
+  const resultsInfo = document.getElementById('resultsInfo');
+  const clearBtn = document.getElementById('clearFilters');
+  let activeCategory = 'all';
+  let activeYear = 'all';
+  const urlParams = new URLSearchParams(window.location.search);
+  const urlCat = urlParams.get('category');
+  const urlYear = urlParams.get('year');
+  if (urlCat) {
+    activeCategory = urlCat;
+    categoryBtns.forEach(btn => btn.classList.toggle('active', btn.dataset.category === urlCat));
+  }
+  if (urlYear) { activeYear = urlYear; yearSelect.value = urlYear; }
+
+  function filterPosts() {
+    let visibleCount = 0;
+    cards.forEach(card => {
+      const cats = (card.dataset.categories || '').split(' ');
+      const year = (card.dataset.date || '').substring(0, 4);
+      const ok = (activeCategory === 'all' || cats.includes(activeCategory)) && (activeYear === 'all' || year === activeYear);
+      card.style.display = ok ? '' : 'none';
+      if (ok) visibleCount++;
+    });
+    noResults.classList.toggle('hidden', visibleCount > 0);
+    grid.style.display = visibleCount > 0 ? '' : 'none';
+    const catLabel = activeCategory === 'all' ? 'all categories' : activeCategory;
+    const yearLabel = activeYear === 'all' ? 'all years' : activeYear;
+    resultsInfo.textContent = 'Showing ' + visibleCount + ' post' + (visibleCount !== 1 ? 's' : '') + ' in ' + catLabel + ' \u2014 ' + yearLabel;
+    clearBtn.classList.toggle('hidden', activeCategory === 'all' && activeYear === 'all');
+    const params = new URLSearchParams();
+    if (activeCategory !== 'all') params.set('category', activeCategory);
+    if (activeYear !== 'all') params.set('year', activeYear);
+    history.replaceState(null, '', window.location.pathname + (params.toString() ? '?' + params.toString() : ''));
+  }
+  categoryBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      categoryBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeCategory = btn.dataset.category;
+      filterPosts();
+    });
+  });
+  yearSelect.addEventListener('change', () => { activeYear = yearSelect.value; filterPosts(); });
+  clearBtn.addEventListener('click', () => {
+    activeCategory = 'all'; activeYear = 'all';
+    categoryBtns.forEach(b => b.classList.toggle('active', b.dataset.category === 'all'));
+    yearSelect.value = 'all';
+    filterPosts();
+  });
+  filterPosts();
+})();
 </script>
 </body>
 </html>

@@ -488,6 +488,36 @@ nav.scrolled .nav-hamburger span {
 }
 .news-card:hover .read-more { gap: 12px; }
 
+/* ─── NEWS SLIDER ─── */
+.news-slider-wrapper{position:relative;max-width:1200px;overflow:hidden}
+.news-slider{display:flex;gap:24px;transition:transform .6s cubic-bezier(.22,1,.36,1);cursor:grab}
+.news-slider.dragging{cursor:grabbing;transition:none}
+.news-slide{min-width:360px;max-width:360px;flex-shrink:0}
+.news-slide .news-card{height:100%;display:flex;flex-direction:column}
+.news-card-img{height:180px;border-radius:16px 16px 0 0;overflow:hidden;margin:-36px -36px 20px;width:calc(100% + 72px)}
+.news-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.news-card:hover .news-card-img img{transform:scale(1.05)}
+.news-card-content{flex:1;display:flex;flex-direction:column}
+.news-card-content p{flex:1}
+.slider-nav{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin-top:36px}
+.slider-dots{display:flex;gap:8px}
+.slider-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.15);border:none;cursor:pointer;transition:all .3s;padding:0}
+.slider-dot.active{background:var(--warm);width:28px;border-radius:5px}
+.slider-arrows{display:flex;gap:12px}
+.slider-arrow{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:var(--mist);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s}
+.slider-arrow:hover{background:rgba(212,165,116,.15);border-color:var(--warm);color:var(--warm)}
+.slider-arrow:disabled{opacity:.3;cursor:default;pointer-events:none}
+.slider-viewall{display:inline-flex;align-items:center;gap:8px;color:var(--warm);font-weight:500;font-size:.92rem;text-decoration:none;transition:gap .3s}
+.slider-viewall:hover{gap:14px}
+
+@media(max-width:900px){
+  .news-slide{min-width:300px;max-width:300px}
+}
+@media(max-width:640px){
+  .news-slide{min-width:calc(100vw - 64px);max-width:calc(100vw - 64px)}
+  .slider-arrows{display:none}
+}
+  
 /* ─── PLANS ─── */
 .plans {
   padding: 120px 48px;
@@ -1175,24 +1205,109 @@ nav.scrolled .nav-dropdown-menu a:hover{background:rgba(255,255,255,.08);color:v
 <section class="updates" id="updates">
   <div class="section-label reveal">Latest Updates</div>
   <h2 class="reveal delay-1">What's New</h2>
-  <div class="news-grid">
-    <div class="news-card reveal delay-2">
-      <div class="news-tag">Pension</div>
-      <h3>Plan Early, Retire Confidently</h3>
-      <p>Just 1 in 10 Canadians say they know how much income they'll need in retirement. Learn how your workplace pension can help you retire with peace of mind.</p>
-      <a href="#" class="read-more">Read more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-    </div>
-    <div class="news-card reveal delay-3">
-      <div class="news-tag">Wellness</div>
-      <h3>Nourish to Flourish</h3>
-      <p>The Nourish to Flourish message emphasizes that food is more than fuel — it's a cornerstone of overall well-being. Explore resources to support healthier habits.</p>
-      <a href="#" class="read-more">Read more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-    </div>
-    <div class="news-card reveal delay-4">
-      <div class="news-tag">Benefits</div>
-      <h3>Understanding Your Coverage</h3>
-      <p>Your benefits plan provides comprehensive health and dental coverage. Review your plan details and learn how to make the most of the support available to you.</p>
-      <a href="#" class="read-more">Read more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       NEWS SLIDER — LATEST 5 POSTS
+       ══════════════════════════════════════════════════════════════
+       HOW TO UPDATE WHEN ADDING A NEW BLOG POST:
+       1. Add a new .news-slide block at the BEGINNING of .news-slider
+       2. If there are more than 5 slides, REMOVE the last/oldest one
+       3. Update the href to point to the blog post HTML file
+       4. Update the thumbnail image, category tag, title, and excerpt
+       5. Keep slides in reverse-chronological order (newest first)
+       ══════════════════════════════════════════════════════════════ -->
+  <div class="news-slider-wrapper reveal delay-2">
+    <div class="news-slider" id="newsSlider">
+
+      <!-- SLIDE 1 (newest) -->
+      <div class="news-slide">
+        <div class="news-card">
+          <div class="news-card-img">
+            <img src="https://placehold.co/400x200/3D6B7E/FFFFFF?text=Plan+Early" alt="Plan Early, Retire Confidently">
+          </div>
+          <div class="news-card-content">
+            <div class="news-tag">Pension</div>
+            <h3>Plan Early, Retire Confidently</h3>
+            <p>Just 1 in 10 Canadians say they know how much income they'll need in retirement. Learn how your workplace pension can help.</p>
+            <a href="posts/2026-03-plan-early.html" class="read-more">Read more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 2 -->
+      <div class="news-slide">
+        <div class="news-card">
+          <div class="news-card-img">
+            <img src="https://placehold.co/400x200/5B7F95/FFFFFF?text=Nourish" alt="Nourish to Flourish">
+          </div>
+          <div class="news-card-content">
+            <div class="news-tag">Wellness</div>
+            <h3>Nourish to Flourish</h3>
+            <p>The Nourish to Flourish message emphasizes that food is more than fuel — it's a cornerstone of overall well-being.</p>
+            <a href="posts/2026-02-nourish-flourish.html" class="read-more">Read more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 3 -->
+      <div class="news-slide">
+        <div class="news-card">
+          <div class="news-card-img">
+            <img src="https://placehold.co/400x200/1B3A4B/FFFFFF?text=Coverage" alt="Understanding Your Coverage">
+          </div>
+          <div class="news-card-content">
+            <div class="news-tag">Benefits</div>
+            <h3>Understanding Your Coverage</h3>
+            <p>Your benefits plan provides comprehensive health and dental coverage. Learn how to make the most of the support available.</p>
+            <a href="posts/2026-01-understanding-coverage.html" class="read-more">Read more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 4 -->
+      <div class="news-slide">
+        <div class="news-card">
+          <div class="news-card-img">
+            <img src="https://placehold.co/400x200/4A9EAF/FFFFFF?text=Enrollment" alt="Open Enrollment Guide">
+          </div>
+          <div class="news-card-content">
+            <div class="news-tag">Benefits</div>
+            <h3>Open Enrollment Guide 2025</h3>
+            <p>Everything you need to know about the annual open enrollment period, including key dates, plan options, and how to make changes.</p>
+            <a href="posts/2025-11-open-enrollment.html" class="read-more">Read more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 5 (oldest) -->
+      <div class="news-slide">
+        <div class="news-card">
+          <div class="news-card-img">
+            <img src="https://placehold.co/400x200/8BAABB/1B3A4B?text=Retirement" alt="Retirement Readiness">
+          </div>
+          <div class="news-card-content">
+            <div class="news-tag">Pension</div>
+            <h3>Your Retirement Readiness Checklist</h3>
+            <p>Whether retirement is decades away or just around the corner, this checklist helps you assess your preparedness.</p>
+            <a href="posts/2025-09-retirement-readiness.html" class="read-more">Read more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.news-slider -->
+  </div><!-- /.news-slider-wrapper -->
+
+  <!-- Slider Navigation -->
+  <div class="slider-nav">
+    <div class="slider-dots" id="sliderDots"></div>
+    <a href="resources.html" class="slider-viewall">View all posts <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    <div class="slider-arrows">
+      <button class="slider-arrow" id="sliderPrev" aria-label="Previous">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+      </button>
+      <button class="slider-arrow" id="sliderNext" aria-label="Next">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </button>
     </div>
   </div>
 </section>
@@ -1511,6 +1626,110 @@ if (hamburger && navLinks) {
   });
 }
 
+// ─── News Slider ───
+(function() {
+  const slider = document.getElementById('newsSlider');
+  const dotsContainer = document.getElementById('sliderDots');
+  const prevBtn = document.getElementById('sliderPrev');
+  const nextBtn = document.getElementById('sliderNext');
+  if (!slider || !dotsContainer) return;
+
+  const slides = slider.querySelectorAll('.news-slide');
+  const totalSlides = slides.length;
+  let currentIndex = 0;
+  let slidesPerView = 3;
+  let isDragging = false;
+  let startX = 0;
+  let scrollLeft = 0;
+
+  function calcSlidesPerView() {
+    const w = window.innerWidth;
+    if (w <= 640) return 1;
+    if (w <= 900) return 2;
+    return 3;
+  }
+
+  function getMaxIndex() {
+    return Math.max(0, totalSlides - slidesPerView);
+  }
+
+  function buildDots() {
+    dotsContainer.innerHTML = '';
+    const count = getMaxIndex() + 1;
+    for (let i = 0; i < count; i++) {
+      const dot = document.createElement('button');
+      dot.className = 'slider-dot' + (i === currentIndex ? ' active' : '');
+      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function goTo(index) {
+    currentIndex = Math.max(0, Math.min(index, getMaxIndex()));
+    const slideWidth = slides[0].offsetWidth + 24; // gap
+    slider.style.transform = 'translateX(' + (-currentIndex * slideWidth) + 'px)';
+    updateUI();
+  }
+
+  function updateUI() {
+    // Dots
+    const dots = dotsContainer.querySelectorAll('.slider-dot');
+    dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+    // Arrows
+    if (prevBtn) prevBtn.disabled = currentIndex === 0;
+    if (nextBtn) nextBtn.disabled = currentIndex >= getMaxIndex();
+  }
+
+  // Arrow clicks
+  if (prevBtn) prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
+  if (nextBtn) nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
+
+  // Touch/drag support
+  slider.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    slider.classList.add('dragging');
+    startX = e.pageX;
+  });
+  slider.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+  });
+  slider.addEventListener('mouseup', (e) => {
+    if (!isDragging) return;
+    isDragging = false;
+    slider.classList.remove('dragging');
+    const diff = e.pageX - startX;
+    if (Math.abs(diff) > 60) {
+      goTo(currentIndex + (diff > 0 ? -1 : 1));
+    }
+  });
+  slider.addEventListener('mouseleave', () => {
+    isDragging = false;
+    slider.classList.remove('dragging');
+  });
+
+  // Touch events
+  slider.addEventListener('touchstart', (e) => { startX = e.touches[0].pageX; }, { passive: true });
+  slider.addEventListener('touchend', (e) => {
+    const diff = e.changedTouches[0].pageX - startX;
+    if (Math.abs(diff) > 60) {
+      goTo(currentIndex + (diff > 0 ? -1 : 1));
+    }
+  });
+
+  // Resize handler
+  function onResize() {
+    slidesPerView = calcSlidesPerView();
+    if (currentIndex > getMaxIndex()) currentIndex = getMaxIndex();
+    buildDots();
+    goTo(currentIndex);
+  }
+
+  window.addEventListener('resize', onResize);
+  onResize();
+})();
+  
 </script>
 </body>
 </html>

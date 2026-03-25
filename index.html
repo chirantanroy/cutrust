@@ -89,10 +89,11 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(27, 58, 75, 0.08);
+  background: rgba(27, 58, 75, 0.92);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border-bottom: 1px solid rgba(91, 127, 149, 0.1);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.12);
   transition: all 0.4s ease;
 }
 nav.scrolled {
@@ -159,12 +160,12 @@ nav.scrolled .nav-cta {
 /* ─── EMPLOYER PORTAL (outline variant) ─── */
 .nav-cta-outline {
   background: transparent;
-  border: 1.5px solid var(--deep);
-  color: var(--deep);
+  border: 1.5px solid var(--warm-light);
+  color: var(--white);
 }
 .nav-cta-outline:hover {
-  background: var(--deep);
-  color: var(--white);
+  background: var(--warm);
+  color: var(--deep);
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(27, 58, 75, 0.25);
 }
@@ -1137,8 +1138,11 @@ footer {
   .footer-links{justify-content:center}
 }
 
-.nav-logo-light {
+.nav-logo-dark {
   display: none;
+}
+.nav-logo-light {
+  display: block;
 }
 nav.scrolled .nav-logo-dark {
   display: none;
@@ -1567,11 +1571,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealElements.forEach(el => revealObserver.observe(el));
 
-// ─── Nav Scroll ───
-const nav = document.getElementById('mainNav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 60);
-});
+// ─── Nav Scroll disabled - dark nav is always on
 
 // ─── Counter Animation ───
 const counters = document.querySelectorAll('.stat-number[data-target]');
